@@ -10,98 +10,101 @@ h1 {
   text-align: center;
 }
 
+/* Centrado automático del formulario según el contenedor */
 form {
-  /* width: 1200px; */ /* No hace falta ponerle width porque coje todo lo que le queda contenido del padre, y asi lo podemos centrar */
+  max-width: 800px;
+  width: 90%;
+  margin: 20px auto;
   padding: 20px;
   border: 2px solid #dfe7ef;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(90, 110, 140, 0.08);
-  margin: 20px calc((1098.4px - ((2px * 2) + (20px * 2) + 900px)) / 2);
   background-color: #ffffff;
+  box-sizing: border-box;
 }
 
 fieldset {
   border: 0;
+  margin: 0 0 15px 0;
+  padding: 0;
 }
 
-form fieldset:nth-of-type(4),
-form fieldset:nth-of-type(5) {
-  clear: left;
-  border: 0;
-}
-
+/* Dos columnas fluidas para Profesores (fieldset 2) y Días (fieldset 3) */
 form fieldset:nth-of-type(2),
 form fieldset:nth-of-type(3) {
   float: left;
-  width: calc((1200px - (20px * 2)) / 2);
-  padding: 0;
-  margin: 10px;
-  border: 0;
+  width: 48%;
+  margin-right: 4%;
+  box-sizing: border-box;
+}
+
+/* Quitar el margen derecho del segundo bloque flotado */
+form fieldset:nth-of-type(3) {
+  margin-right: 0;
+}
+
+/* Limpiar el float para que Horas e Información queden debajo */
+form fieldset:nth-of-type(4),
+form fieldset:nth-of-type(5) {
+  clear: both;
 }
 
 label,
-p,
 legend {
-  border: 1px solid #dfe7ef;
-  border-radius: 4px;
-  margin: 0;
-  padding: 10px;
-  background-color: #f4f7fb;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
+/* Estilos de controles de entrada */
 select,
-legend ~ label {
-  width: 300px;
+input[type="text"],
+textarea {
+  width: 100%;
+  max-width: 320px;
   padding: 10px;
   border: 1px solid #d4dde8;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(90, 110, 140, 0.08);
-  margin: 10px;
   background-color: #fbfdff;
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  max-width: 100px;
+}
+
+textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+/* Estilos para Radio y Checkbox con sus etiquetas */
+fieldset label {
+  display: block;
+  font-weight: normal;
+  padding: 5px 0;
+  background-color: transparent;
+  border: none;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
   width: 16px;
   height: 16px;
-  margin: 20px 10px;
+  margin-right: 8px;
   vertical-align: middle;
-}
-
-input[type="text"] {
-  width: 70px;
-  padding: 10px;
-  border: 1px solid #d4dde8;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(90, 110, 140, 0.08);
-  margin: 10px;
-  background-color: #fbfdff;
-}
-
-textarea {
-  width: 360px;
-  height: 20px;
-  padding: 10px;
-  border: 1px solid #d4dde8;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(90, 110, 140, 0.08);
-  margin: 10px;
-  background-color: #fbfdff;
-  vertical-align: middle;
-  resize: none;
 }
 
 input[type="submit"] {
   width: 120px;
-  height: 35px;
+  height: 40px;
   padding: 5px;
   border: 1px solid #5b7a99;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(91, 122, 153, 0.2);
-  margin: 10px;
+  margin-top: 10px;
   background-color: #5b7a99;
   color: #ffffff;
+  cursor: pointer;
 }

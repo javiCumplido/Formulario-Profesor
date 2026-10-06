@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form action="./mostrarResultado.php" method="get">
+      <h1>Formulario Horario</h1>
+      <!-- Select de asignatura para elegir -->
+      <fieldset>
+        <label for="asignatura">Asignatura: </label>
+        <select name="asignatura" id="asignatura">
+          <option value="BBDD">Base de Datos</option>
+          <option value="EEDD">Entorno de Desarrollo</option>
+          <option value="PROG">Programacion</option>
+          <option value="SSINF">Sistemas Informaticos</option>
+          <option value="LMSG">Lenguaje de Marcas</option>
+          <option value="INGP">Ingles Profesional</option>
+          <option value="IPE1">Itinerario Personal para Empleabilidad 1</option>
+          <option value="TUTO">Tutoria</option>
+        </select>
+      </fieldset>
+      <!-- Radio de profesores -->
+      <fieldset>
+        <legend>Profesores:</legend>
+        <label for="IMD">
+          <input
+            type="radio"
+            name="profesores[]"
+            value="Isabel Muñoz Dominguez"
+            id="IMD"
+          />Isabel Muñoz Dominguez</label
+        >
+        <label for="FGR">
+          <input
+            type="radio"
+            name="profesores[]"
+            value="Francisco Garcia Ramirez"
+            id="FGR"
+          />Francisco Garcia Ramirez</label
+        >
+        <label for="ADL">
+          <input
+            type="radio"
+            name="profesores[]"
+            value="Alberto Dominguez Lebrato"
+            id="ADL"
+          />Alberto Dominguez Lebrato</label
+        >
+        <label for="SVA">
+          <input
+            type="radio"
+            name="profesores[]"
+            value="Santiago Vazquez Aguilar"
+            id="SVA"
+          />Santiago Vazquez Aguilar</label
+        >
+        <label for="JMAG">
+          <input
+            type="radio"
+            name="profesores[]"
+            value="Jose Maria Auirio Gomez"
+            id="JMAG"
+          />Jose Maria Auirio Gomez</label
+        >
+      </fieldset>
+      <!-- Checkboxes para las asignatura - Eleccion multiple -->
+      <fieldset>
+        <legend>Dia de la semana:</legend>
+        <label for="lunes">
+          <input type="checkbox" name="semana" value="lunes" id="lunes" />
+          Lunes</label
+        >
+        <label for="martes">
+          <input
+            type="checkbox"
+            name="semana"
+            id="martes"
+            value="martes"
+          />Martes</label
+        >
+        <label for="miercoles">
+          <input
+            type="checkbox"
+            name="semana"
+            id="miercoles"
+            value="miercoles"
+          />Miercoles</label
+        >
+        <label for="jueves">
+          <input
+            type="checkbox"
+            name="semana"
+            id="jueves"
+            value="jueves"
+          />Jueves</label
+        >
+        <label for="viernes">
+          <input
+            type="checkbox"
+            name="semana"
+            id="viernes"
+            value="viernes"
+          />Viernes</label
+        >
+      </fieldset>
+      <!-- Input text para las  horas -->
+      <fieldset>
+        <label for="horas">Horas: </label>
+        <input type="text" name="horas" id="horas" />
+      </fieldset>
+      <!-- Textarea para definir la informacion adicional y opcional -->
+      <fieldset>
+        <label for="informacion">Informacion: </label>
+        <textarea
+          name="informacion"
+          id="informacion"
+          cols="20"
+          rows="10"
+        ></textarea>
+      </fieldset>
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>

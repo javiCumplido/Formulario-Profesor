@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  margin: 0;
+  background-color: #eef2f7;
+  color: #3a4556;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  /* width: 1200px; */ /* No hace falta ponerle width porque coje todo lo que le queda contenido del padre, y asi lo podemos centrar */
+  padding: 20px;
+  border: 2px solid #dfe7ef;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(90, 110, 140, 0.08);
+  margin: 20px calc((1098.4px - ((2px * 2) + (20px * 2) + 900px)) / 2);
+  background-color: #ffffff;
+}
+
+fieldset {
+  border: 0;
+}
+
+form fieldset:nth-of-type(4),
+form fieldset:nth-of-type(5) {
+  clear: left;
+  border: 0;
+}
+
+form fieldset:nth-of-type(2),
+form fieldset:nth-of-type(3) {
+  float: left;
+  width: calc((1200px - (20px * 2)) / 2);
+  padding: 0;
+  margin: 10px;
+  border: 0;
+}
+
+label,
+p,
+legend {
+  border: 1px solid #dfe7ef;
+  border-radius: 4px;
+  margin: 0;
+  padding: 10px;
+  background-color: #f4f7fb;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+select,
+legend ~ label {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #d4dde8;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(90, 110, 140, 0.08);
+  margin: 10px;
+  background-color: #fbfdff;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  margin: 20px 10px;
+  vertical-align: middle;
+}
+
+input[type="text"] {
+  width: 70px;
+  padding: 10px;
+  border: 1px solid #d4dde8;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(90, 110, 140, 0.08);
+  margin: 10px;
+  background-color: #fbfdff;
+}
+
+textarea {
+  width: 360px;
+  height: 20px;
+  padding: 10px;
+  border: 1px solid #d4dde8;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(90, 110, 140, 0.08);
+  margin: 10px;
+  background-color: #fbfdff;
+  vertical-align: middle;
+  resize: none;
+}
+
+input[type="submit"] {
+  width: 120px;
+  height: 35px;
+  padding: 5px;
+  border: 1px solid #5b7a99;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(91, 122, 153, 0.2);
+  margin: 10px;
+  background-color: #5b7a99;
+  color: #ffffff;
+}

@@ -1,109 +1,150 @@
+/* Box-Sizing explícito por defecto */
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+
 body {
+  display: block;
   font-family: Arial, sans-serif;
+  width: 980px;
   padding: 10px;
-  margin: 0;
+  margin: 0px;
   background-color: #eef2f7;
   color: #3a4556;
 }
 
 h1 {
+  display: block;
   text-align: center;
+  width: 756px;
+  margin: 20px 0px;
+  padding: 0px;
+  border: 0px;
 }
 
-/* Centrado automático del formulario según el contenedor */
 form {
-  max-width: 800px;
-  width: 90%;
+  display: flow-root;
+  width: 756px;
   margin: 20px auto;
   padding: 20px;
   border: 2px solid #dfe7ef;
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(90, 110, 140, 0.08);
+  box-shadow: 0px 8px 24px rgba(90, 110, 140, 0.08);
   background-color: #ffffff;
-  box-sizing: border-box;
 }
 
 fieldset {
-  border: 0;
-  margin: 0 0 15px 0;
-  padding: 0;
+  display: block;
+  border: 0px;
+  margin: 0px 0px 15px 0px;
+  padding: 0px;
+  width: 756px;
 }
 
-/* Dos columnas fluidas para Profesores (fieldset 2) y Días (fieldset 3) */
-form fieldset:nth-of-type(2),
-form fieldset:nth-of-type(3) {
+/* Columna izquierda: Profesores */
+form fieldset:nth-of-type(2) {
+  display: block;
   float: left;
-  width: 48%;
-  margin-right: 4%;
-  box-sizing: border-box;
+  width: 360px;
+  margin: 0px 36px 15px 0px;
+  padding: 0px;
+  border: 0px;
 }
 
-/* Quitar el margen derecho del segundo bloque flotado */
+/* Columna derecha: Días de la semana */
 form fieldset:nth-of-type(3) {
-  margin-right: 0;
+  display: block;
+  float: left;
+  width: 360px;
+  margin: 0px 0px 15px 0px;
+  padding: 0px;
+  border: 0px;
 }
 
-/* Limpiar el float para que Horas e Información queden debajo */
+/* Limpieza de flotados para los siguientes bloques */
 form fieldset:nth-of-type(4),
 form fieldset:nth-of-type(5) {
+  display: block;
   clear: both;
 }
 
 label,
 legend {
-  display: inline-block;
-  font-weight: bold;
-  margin-bottom: 5px;
+  display: block;
+  border: 1px solid #dfe7ef;
+  border-radius: 4px;
+  margin: 0px 0px 5px 0px;
+  padding: 10px;
+  background-color: #f4f7fb;
 }
 
-/* Estilos de controles de entrada */
-select,
-input[type="text"],
-textarea {
-  width: 100%;
-  max-width: 320px;
+legend ~ label {
+  display: block;
+  width: 318px;
   padding: 10px;
   border: 1px solid #d4dde8;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(90, 110, 140, 0.08);
+  box-shadow: 0px 1px 3px rgba(90, 110, 140, 0.08);
+  margin: 10px 0px;
   background-color: #fbfdff;
-  box-sizing: border-box;
 }
 
-input[type="text"] {
-  max-width: 100px;
-}
-
-textarea {
-  height: 80px;
-  resize: vertical;
-}
-
-/* Estilos para Radio y Checkbox con sus etiquetas */
-fieldset label {
-  display: block;
-  font-weight: normal;
-  padding: 5px 0;
-  background-color: transparent;
-  border: none;
+select {
+  display: inline-block;
+  width: 278px;
+  padding: 10px;
+  border: 1px solid #d4dde8;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px rgba(90, 110, 140, 0.08);
+  margin: 0px;
+  background-color: #fbfdff;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
+  display: inline;
   width: 16px;
   height: 16px;
-  margin-right: 8px;
+  margin: 0px 10px 0px 0px;
   vertical-align: middle;
 }
 
+input[type="text"] {
+  display: inline-block;
+  width: 78px;
+  padding: 10px;
+  border: 1px solid #d4dde8;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px rgba(90, 110, 140, 0.08);
+  margin: 0px;
+  background-color: #fbfdff;
+}
+
+textarea {
+  display: inline-block;
+  width: 338px;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #d4dde8;
+  border-radius: 10px;
+  box-shadow: 0px 1px 3px rgba(90, 110, 140, 0.08);
+  margin: 0px;
+  background-color: #fbfdff;
+  vertical-align: middle;
+  resize: none;
+}
+
 input[type="submit"] {
-  width: 120px;
-  height: 40px;
+  display: inline-block;
+  width: 108px;
+  height: 28px;
   padding: 5px;
   border: 1px solid #5b7a99;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(91, 122, 153, 0.2);
-  margin-top: 10px;
+  box-shadow: 0px 2px 8px rgba(91, 122, 153, 0.2);
+  margin: 10px 0px 0px 0px;
   background-color: #5b7a99;
   color: #ffffff;
   cursor: pointer;

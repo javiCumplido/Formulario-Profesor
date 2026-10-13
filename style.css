@@ -1,55 +1,52 @@
-/* Box-Sizing explícito por defecto */
-*,
-*::before,
-*::after {
-  box-sizing: content-box;
+html {
+  width: 700px; /* Contenedor raíz base (se mantiene en px según lo indicado) */
 }
 
 body {
   display: block;
   font-family: Arial, sans-serif;
-  width: 980px;
-  padding: 10px;
-  margin: 0px;
+  width: 0 auto; /* (0 / 700) * 100 - Contenedor: html (700px), Elemento: px */
+  padding: 1.42857142857%; /* (10 / 700) * 100 - Contenedor: html (700px), Elemento: 10px */
+  margin: 0%; /* (0 / 700) * 100 - Contenedor: html (700px), Elemento: 0px */
   background-color: #eef2f7;
   color: #3a4556;
 }
 
-h1 {
-  display: block;
-  text-align: center;
-  width: 756px;
-  margin: 20px 0px;
-  padding: 0px;
-  border: 0px;
-}
-
 form {
   display: flow-root;
-  width: 756px;
-  margin: 20px auto;
-  padding: 20px;
+  width: 88.2352941176%; /* (600 / 680) * 100 - Contenedor: body (680px), Elemento: 600px */
+  margin: 2.94117647059% auto; /* (20 / 680) * 100 - Contenedor: body (680px), Elemento: 20px */
+  padding: 2.94117647059%; /* (20 / 680) * 100 - Contenedor: body (680px), Elemento: 20px */
   border: 2px solid #dfe7ef;
   border-radius: 12px;
   box-shadow: 0px 8px 24px rgba(90, 110, 140, 0.08);
   background-color: #ffffff;
 }
 
+h1 {
+  display: block;
+  text-align: center;
+  width: 98.3333333333%; /* (590 / 600) * 100 - Contenedor: form (600px), Elemento: 590px */
+  margin: 3.33333333333% 0%; /* (20 / 600) * 100 - Contenedor: form (600px), Elemento: 20px (Corregido) */
+  padding: 0%; /* (0 / 600) * 100 - Contenedor: form (600px), Elemento: 0px */
+  border: 0px; 
+}
+
 fieldset {
   display: block;
   border: 0px;
-  margin: 0px 0px 15px 0px;
-  padding: 0px;
-  width: 756px;
+  margin: 0% 0% 2.5% 0%; /* (15 / 600) * 100 - Contenedor: form (600px), Elemento: 15px */
+  padding: 0%; /* (0 / 600) * 100 - Contenedor: form (600px), Elemento: 0px */
+  width: 98.3333333333%; /* (590 / 600) * 100 - Contenedor: form (600px), Elemento: 590px */
 }
 
 /* Columna izquierda: Profesores */
 form fieldset:nth-of-type(2) {
   display: block;
   float: left;
-  width: 360px;
-  margin: 0px 36px 15px 0px;
-  padding: 0px;
+  width: 60%; /* (360 / 600) * 100 - Contenedor: form (600px), Elemento: 360px */
+  margin: 0% 6% 2.5% 0%; /* Der: (36 / 600) * 100, Aba: (15 / 600) * 100 - Contenedor: form (600px) */
+  padding: 0%; /* (0 / 600) * 100 - Contenedor: form (600px), Elemento: 0px */
   border: 0px;
 }
 
@@ -57,9 +54,9 @@ form fieldset:nth-of-type(2) {
 form fieldset:nth-of-type(3) {
   display: block;
   float: left;
-  width: 360px;
-  margin: 0px 0px 15px 0px;
-  padding: 0px;
+  width: 60%; /* (360 / 600) * 100 - Contenedor: form (600px), Elemento: 360px */
+  margin: 0% 0% 2.5% 0%; /* Aba: (15 / 600) * 100 - Contenedor: form (600px), Elemento: 15px */
+  padding: 0%; /* (0 / 600) * 100 - Contenedor: form (600px), Elemento: 0px */
   border: 0px;
 }
 
@@ -75,62 +72,62 @@ legend {
   display: block;
   border: 1px solid #dfe7ef;
   border-radius: 4px;
-  margin: 0px 0px 5px 0px;
-  padding: 10px;
+  margin: 0% 0% 0.84745762711% 0%; /* (5 / 590) * 100 - Contenedor: fieldset (590px), Elemento: 5px */
+  padding: 1.69491525423%; /* (10 / 590) * 100 - Contenedor: fieldset (590px), Elemento: 10px */
   background-color: #f4f7fb;
 }
 
 legend ~ label {
   display: block;
-  width: 318px;
-  padding: 10px;
+  width: 88.3333333333%; /* (318 / 360) * 100 - Contenedor: fieldset columna (360px), Elemento: 318px */
+  padding: 2.77777777777%; /* (10 / 360) * 100 - Contenedor: fieldset columna (360px), Elemento: 10px */
   border: 1px solid #d4dde8;
   border-radius: 8px;
   box-shadow: 0px 1px 3px rgba(90, 110, 140, 0.08);
-  margin: 10px 0px;
+  margin: 2.77777777777% 0%; /* (10 / 360) * 100 - Contenedor: fieldset columna (360px), Elemento: 10px */
   background-color: #fbfdff;
 }
 
 select {
   display: inline-block;
-  width: 278px;
-  padding: 10px;
+  width: 77.2222222222%; /* (278 / 360) * 100 - Contenedor: fieldset columna (360px), Elemento: 278px */
+  padding: 2.77777777777%; /* (10 / 360) * 100 - Contenedor: fieldset columna (360px), Elemento: 10px */
   border: 1px solid #d4dde8;
   border-radius: 8px;
   box-shadow: 0px 1px 3px rgba(90, 110, 140, 0.08);
-  margin: 0px;
+  margin: 0%; /* (0 / 360) * 100 - Contenedor: fieldset columna (360px), Elemento: 0px */
   background-color: #fbfdff;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
-  width: 16px;
+  width: 5.03144654088%; /* (16 / 318) * 100 - Contenedor: legend ~ label (318px), Elemento: 16px */
   height: 16px;
-  margin: 0px 10px 0px 0px;
+  margin: 0% 3.14465408805% 0% 0%; /* (10 / 318) * 100 - Contenedor: legend ~ label (318px), Elemento: 10px */
   vertical-align: middle;
 }
 
 input[type="text"] {
   display: inline-block;
-  width: 78px;
-  padding: 10px;
+  width: 13.2203389831%; /* (78 / 590) * 100 - Contenedor: fieldset (590px), Elemento: 78px */
+  padding: 1.69491525423%; /* (10 / 590) * 100 - Contenedor: fieldset (590px), Elemento: 10px */
   border: 1px solid #d4dde8;
   border-radius: 8px;
   box-shadow: 0px 1px 3px rgba(90, 110, 140, 0.08);
-  margin: 0px;
+  margin: 0%; /* (0 / 590) * 100 - Contenedor: fieldset (590px), Elemento: 0px */
   background-color: #fbfdff;
 }
 
 textarea {
   display: inline-block;
-  width: 338px;
+  width: 57.2881355932%; /* (338 / 590) * 100 - Contenedor: fieldset (590px), Elemento: 338px */
   height: 80px;
-  padding: 10px;
+  padding: 1.69491525423%; /* (10 / 590) * 100 - Contenedor: fieldset (590px), Elemento: 10px */
   border: 1px solid #d4dde8;
   border-radius: 10px;
   box-shadow: 0px 1px 3px rgba(90, 110, 140, 0.08);
-  margin: 0px;
+  margin: 0%; /* (0 / 590) * 100 - Contenedor: fieldset (590px), Elemento: 0px */
   background-color: #fbfdff;
   vertical-align: middle;
   resize: none;
@@ -138,13 +135,13 @@ textarea {
 
 input[type="submit"] {
   display: inline-block;
-  width: 108px;
+  width: 18%; /* (108 / 600) * 100 - Contenedor: form (600px), Elemento: 108px */
   height: 28px;
-  padding: 5px;
+  padding: 0.83333333333%; /* (5 / 600) * 100 - Contenedor: form (600px), Elemento: 5px */
   border: 1px solid #5b7a99;
   border-radius: 8px;
   box-shadow: 0px 2px 8px rgba(91, 122, 153, 0.2);
-  margin: 10px 0px 0px 0px;
+  margin: 1.66666666667% 0% 0% 0%; /* (10 / 600) * 100 - Contenedor: form (600px), Elemento: 10px */
   background-color: #5b7a99;
   color: #ffffff;
   cursor: pointer;

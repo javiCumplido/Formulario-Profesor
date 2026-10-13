@@ -1,15 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- # Investigar -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" />  -->
     <title>Formulario</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
   <body>
     <form action="./mostrarResultado.php" method="get">
       <h1>Formulario Horario</h1>
-      <!-- Select de asignatura para elegir -->
+
       <fieldset>
         <label for="asignatura">Asignatura: </label>
         <select name="asignatura" id="asignatura">
@@ -23,7 +24,7 @@
           <option value="TUTO">Tutoria</option>
         </select>
       </fieldset>
-      <!-- Radio de profesores -->
+
       <fieldset>
         <legend>Profesores:</legend>
         <label for="IMD">
@@ -67,7 +68,7 @@
           />Jose Maria Auirio Gomez</label
         >
       </fieldset>
-      <!-- Checkboxes para las asignatura - Eleccion multiple -->
+
       <fieldset>
         <legend>Dia de la semana:</legend>
         <label for="lunes">
@@ -107,12 +108,12 @@
           />Viernes</label
         >
       </fieldset>
-      <!-- Input text para las  horas -->
+
       <fieldset>
         <label for="horas">Horas: </label>
         <input type="text" name="horas" id="horas" />
       </fieldset>
-      <!-- Textarea para definir la informacion adicional y opcional -->
+
       <fieldset>
         <label for="informacion">Informacion: </label>
         <textarea
@@ -122,6 +123,7 @@
           rows="10"
         ></textarea>
       </fieldset>
+
       <input type="submit" value="Enviar" />
     </form>
   </body>
